@@ -1,8 +1,8 @@
 {
   "name": "cereja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cereja is a bundle of useful functions we don't want to rewrite and .. just pure fun!",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
