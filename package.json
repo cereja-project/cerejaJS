@@ -1,0 +1,23 @@
+{
+  "name": "cereja",
+  "version": "1.0.0",
+  "description": "Cereja is a bundle of useful functions we don't want to rewrite and .. just pure fun!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cereja-project/cerejaJS.git"
+  },
+  "keywords": [
+    "array",
+    "datapreprocessing"
+  ],
+  "author": "Joab Leite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cereja-project/cerejaJS/issues"
+  },
+  "homepage": "https://github.com/cereja-project/cerejaJS#readme"
+}
