@@ -1,5 +1,5 @@
-const range = function (start, stop, step=1) {
-    if (start > 0){
+const range = function (start, stop, step = 1) {
+    if (start > 0) {
         stop = start
         start = 0
     }
@@ -7,6 +7,24 @@ const range = function (start, stop, step=1) {
         start + (i * step)
     )
 };
+
+const shuffle = function (array) {
+    let currentIndex = array.length, randomIndex;
+
+
+    while (currentIndex !== 0) {
+
+
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
 
 const chunk = function (data, batchSize, fillWith = null, isRandom = false,
                         maxBatches = null) {
@@ -23,6 +41,9 @@ const chunk = function (data, batchSize, fillWith = null, isRandom = false,
     }
 
     // if isRandom need implement
+    if (isRandom) {
+        shuffle(data)
+    }
 
     if (maxBatches === null) {
         maxBatches = data.length % batchSize === 0 ? data.length / batchSize : data.length / batchSize + 1
@@ -46,5 +67,11 @@ const chunk = function (data, batchSize, fillWith = null, isRandom = false,
 
 }
 
+const sample = function (values, k = null, isRandom = false) {
+    return chunk(values, k, null, isRandom, 1)[0]
+}
+
 exports.range = range;
 exports.chunk = chunk;
+exports.shuffle = shuffle;
+exports.sample = sample;
