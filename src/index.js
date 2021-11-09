@@ -1,4 +1,8 @@
-const range = function (start, stop, step) {
+const range = function (start, stop, step=1) {
+    if (start > 0){
+        stop = start
+        start = 0
+    }
     return Array.from({length: (stop - start) / step}, (_, i) =>
         start + (i * step)
     )
