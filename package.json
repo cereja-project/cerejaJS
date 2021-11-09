@@ -1,6 +1,6 @@
 {
   "name": "cereja",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Cereja is a bundle of useful functions we don't want to rewrite and .. just pure fun!",
   "main": "src/index.js",
   "scripts": {
