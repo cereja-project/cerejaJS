@@ -1,1 +1,3 @@
 # cerejaJS
+
+`npm install cereja`
