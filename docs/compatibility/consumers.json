@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-11-07T17:59:26.101Z",
+  "results": [
+    {
+      "react": "18.2.0",
+      "types": "18",
+      "tsx": "passed",
+      "jsxBundle": "passed",
+      "ssr": "passed",
+      "output": "SSR and exports OK"
+    },
+    {
+      "react": "19.3.1",
+      "types": "19",
+      "tsx": "passed",
+      "jsxBundle": "passed",
+      "ssr": "passed",
+      "output": "SSR and exports OK"
+    }
+  ]
+}

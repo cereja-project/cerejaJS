@@ -1,0 +1,10 @@
+{
+  "exitCode": 1,
+  "details": [
+    "Error: browserType.launch: Target page, context or browser has been closed",
+    "[pid=135][err] [135:135:1107/144643.501695:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)",
+    "- [pid=135][err] [135:135:1107/144643.501695:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)",
+    "1 failed",
+    "9 did not run"
+  ]
+}

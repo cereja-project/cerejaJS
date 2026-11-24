@@ -1,0 +1,665 @@
+{
+  "numTotalTestSuites": 13,
+  "numPassedTestSuites": 13,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 47,
+  "numPassedTests": 47,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1794064871186,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "requires an explicit source type and image alternative",
+          "status": "passed",
+          "title": "requires an explicit source type and image alternative",
+          "duration": 1.437310000000025,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064873440,
+      "endTime": 1794064873441.4373,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/consumer/types.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "updates transcript without stealing focus and seeks only on activation",
+          "status": "passed",
+          "title": "updates transcript without stealing focus and seeks only on activation",
+          "duration": 113.04397400000016,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "renders static text for a source that cannot seek and escapes transcript content",
+          "status": "passed",
+          "title": "renders static text for a source that cannot seek and escapes transcript content",
+          "duration": 6.468432000000121,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "switches described version after readiness and preserves position and playback intention",
+          "status": "passed",
+          "title": "switches described version after readiness and preserves position and playback intention",
+          "duration": 57.953549000000066,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "waits for a described source seek window before restoring position",
+          "status": "passed",
+          "title": "waits for a described source seek window before restoring position",
+          "duration": 43.46453999999994,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "does not resume automatically when restoring the described position fails",
+          "status": "passed",
+          "title": "does not resume automatically when restoring the described position fails",
+          "duration": 41.58107999999993,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "moves focus from a removed retry button to the recovered play control",
+          "status": "passed",
+          "title": "moves focus from a removed retry button to the recovered play control",
+          "duration": 45.79353100000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872308,
+      "endTime": 1794064872616.7935,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/integration/alternatives.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "ready player, transcript and gallery have no detectable semantic axe violations",
+          "status": "passed",
+          "title": "ready player, transcript and gallery have no detectable semantic axe violations",
+          "duration": 201.70150200000012,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872315,
+      "endTime": 1794064872516.7014,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/integration/compositions.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "opens an image with keyboard, zooms with a button and returns focus",
+          "status": "passed",
+          "title": "opens an image with keyboard, zooms with a button and returns focus",
+          "duration": 188.55128200000013,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "restores focus to gallery when the open item is removed",
+          "status": "passed",
+          "title": "restores focus to gallery when the open item is removed",
+          "duration": 71.02933199999984,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "uses empty alt only for decorative images and exposes image loading errors",
+          "status": "passed",
+          "title": "uses empty alt only for decorative images and exposes image loading errors",
+          "duration": 6.281060999999909,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "standalone viewer has a visible focus fallback when its opener disappears",
+          "status": "passed",
+          "title": "standalone viewer has a visible focus fallback when its opener disappears",
+          "duration": 39.9786610000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872294,
+      "endTime": 1794064872599.9788,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/integration/images.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "survives StrictMode and unmount without retaining subscriptions",
+          "status": "passed",
+          "title": "survives StrictMode and unmount without retaining subscriptions",
+          "duration": 61.85434199999986,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "notifies onError once per distinct error instead of once per clock tick",
+          "status": "passed",
+          "title": "notifies onError once per distinct error instead of once per clock tick",
+          "duration": 5.963754000000108,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872297,
+      "endTime": 1794064872364.9639,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/integration/media-root.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "keeps shortcuts local and leaves editable fields untouched",
+          "status": "passed",
+          "title": "keeps shortcuts local and leaves editable fields untouched",
+          "duration": 177.78171999999995,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "can disable shortcuts and removes controls as capabilities change",
+          "status": "passed",
+          "title": "can disable shortcuts and removes controls as capabilities change",
+          "duration": 35.66551699999991,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "reports blocked commands without pretending playback started",
+          "status": "passed",
+          "title": "reports blocked commands without pretending playback started",
+          "duration": 45.24920300000008,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "reports errors from speed controls as well as the play button",
+          "status": "passed",
+          "title": "reports errors from speed controls as well as the play button",
+          "duration": 140.23843899999997,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "does not capture keys in contenteditable= descendants",
+          "status": "passed",
+          "title": "does not capture keys in contenteditable= descendants",
+          "duration": 11.698384000000033,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "does not capture keys in contenteditable=plaintext-only descendants",
+          "status": "passed",
+          "title": "does not capture keys in contenteditable=plaintext-only descendants",
+          "duration": 8.793467000000192,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "offers pause during buffering when playback is active",
+          "status": "passed",
+          "title": "offers pause during buffering when playback is active",
+          "duration": 18.274157999999943,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "guards control values against a custom adapter returning non-finite metadata",
+          "status": "passed",
+          "title": "guards control values against a custom adapter returning non-finite metadata",
+          "duration": 9.633020000000215,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "lists only speeds that both provider and application support",
+          "status": "passed",
+          "title": "lists only speeds that both provider and application support",
+          "duration": 28.64588700000013,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872300,
+      "endTime": 1794064872776.646,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/integration/players.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "restores dialog focus after Escape and exposes its name",
+          "status": "passed",
+          "title": "restores dialog focus after Escape and exposes its name",
+          "duration": 150.08858400000008,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "labels range values and forwards changes without stealing typing keys",
+          "status": "passed",
+          "title": "labels range values and forwards changes without stealing typing keys",
+          "duration": 29.95225000000005,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "preserves translated close labels and has no basic axe violations",
+          "status": "passed",
+          "title": "preserves translated close labels and has no basic axe violations",
+          "duration": 55.93934100000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "associates an optional description with its dialog",
+          "status": "passed",
+          "title": "associates an optional description with its dialog",
+          "duration": 18.576963000000205,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "keeps media menus inside their player portal so fullscreen can display them",
+          "status": "passed",
+          "title": "keeps media menus inside their player portal so fullscreen can display them",
+          "duration": 48.05483000000004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872366,
+      "endTime": 1794064872669.055,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/integration/primitives.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "serves a sliding HLS window using the catalog asset path",
+          "status": "passed",
+          "title": "serves a sliding HLS window using the catalog asset path",
+          "duration": 5.864164000000073,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872233,
+      "endTime": 1794064872238.8643,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/unit/live-fixture.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "ignores late source completion and destroys the abandoned adapter exactly once",
+          "status": "passed",
+          "title": "ignores late source completion and destroys the abandoned adapter exactly once",
+          "duration": 2.5266579999999976,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "returns aborted for a command that resolves after source replacement",
+          "status": "passed",
+          "title": "returns aborted for a command that resolves after source replacement",
+          "duration": 1.242507000000046,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "is reusable after StrictMode cleanup and caches snapshots",
+          "status": "passed",
+          "title": "is reusable after StrictMode cleanup and caches snapshots",
+          "duration": 0.3581689999999753,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "normalizes a thrown adapter command into a visible snapshot error",
+          "status": "passed",
+          "title": "normalizes a thrown adapter command into a visible snapshot error",
+          "duration": 0.5064620000000559,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064873359,
+      "endTime": 1794064873363.5063,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/unit/media-store.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "loads explicit file URL without relying on an extension",
+          "status": "passed",
+          "title": "loads explicit file URL without relying on an extension",
+          "duration": 5.742390999999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "normalizes unknown duration without reporting an error or infinity",
+          "status": "passed",
+          "title": "normalizes unknown duration without reporting an error or infinity",
+          "duration": 1.4070849999999382,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "reports rejected play and does not pretend playback started",
+          "status": "passed",
+          "title": "reports rejected play and does not pretend playback started",
+          "duration": 2.140888000000018,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "clamps a seek within valid ranges and ignores events after destroy",
+          "status": "passed",
+          "title": "clamps a seek within valid ranges and ignores events after destroy",
+          "duration": 1.5658539999999448,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064873206,
+      "endTime": 1794064873216.566,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/unit/native.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "does not expose a live target without a DVR window",
+          "status": "passed",
+          "title": "does not expose a live target without a DVR window",
+          "duration": 1.6893999999999778,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "uses the live edge of a moving window and clamps seeks in gaps",
+          "status": "passed",
+          "title": "uses the live edge of a moving window and clamps seeks in gaps",
+          "duration": 0.40078200000004927,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064873439,
+      "endTime": 1794064873441.401,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/unit/streaming.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "reports rejected Vimeo commands and ignores events after destroy",
+          "status": "passed",
+          "title": "reports rejected Vimeo commands and ignores events after destroy",
+          "duration": 6.544828000000052,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "cleans restricted embeds and preserves authorized unlisted hash",
+          "status": "passed",
+          "title": "cleans restricted embeds and preserves authorized unlisted hash",
+          "duration": 1.8633009999999786,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "normalizes invalid Vimeo metadata before publishing a seek window",
+          "status": "passed",
+          "title": "normalizes invalid Vimeo metadata before publishing a seek window",
+          "duration": 1.9486989999999196,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064873293,
+      "endTime": 1794064873302.9487,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/unit/vimeo.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "shares SDK load across two consumers and allows explicit retry after failure",
+          "status": "passed",
+          "title": "shares SDK load across two consumers and allows explicit retry after failure",
+          "duration": 3.615635000000111,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "validates external iframe hosts and keeps provider captions in native UI",
+          "status": "passed",
+          "title": "validates external iframe hosts and keeps provider captions in native UI",
+          "duration": 0.7542740000001231,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "keeps provider controls and cleans a ready or aborted iframe",
+          "status": "passed",
+          "title": "keeps provider controls and cleans a ready or aborted iframe",
+          "duration": 9.55261900000005,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "normalizes invalid iframe metadata before exposing ranges or controls",
+          "status": "passed",
+          "title": "normalizes invalid iframe metadata before exposing ranges or controls",
+          "duration": 2.5661380000001373,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "keeps a terminal YouTube error until explicit reload instead of masking it during polling",
+          "status": "passed",
+          "title": "keeps a terminal YouTube error until explicit reload instead of masking it during polling",
+          "duration": 53.356689999999844,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1794064872318,
+      "endTime": 1794064872388.3567,
+      "status": "passed",
+      "message": "",
+      "name": "/workspace/scratch/0da80ef7a74c/cereja-ui/tests/unit/youtube.test.ts"
+    }
+  ]
+}

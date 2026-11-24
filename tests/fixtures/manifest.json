@@ -1,0 +1,27 @@
+{
+  "sample.mp4": {
+    "origin": "Generated locally with ffmpeg testsrc2 and sine filters",
+    "license": "CC0-1.0",
+    "purpose": "Deterministic playback fixture, not spoken content",
+    "duration": 12
+  },
+  "sample.mp3": {
+    "origin": "Audio extracted from sample.mp4",
+    "license": "CC0-1.0"
+  },
+  "streams": {
+    "origin": "ffmpeg conversion of CC0 sample.mp4",
+    "license": "CC0-1.0",
+    "files": ["streams/hls/*", "streams/dash/*"]
+  },
+  "sample.vtt": {
+    "origin": "Authored for generated sine tone",
+    "license": "CC0-1.0"
+  },
+  "described.mp4": {
+    "origin": "sample.mp4 mixed with locally synthesized English description using ffmpeg flite/slt",
+    "license": "CC0-1.0 for authored script and generated test fixture",
+    "language": "en",
+    "script": "A color test pattern fills the screen. Geometric shapes and counters move across the image. A continuous tone plays."
+  }
+}

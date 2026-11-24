@@ -1,0 +1,9 @@
+export { AccessibleForm as AccessibleFormJSX } from './AccessibleForm-js.jsx';
+export { Lesson as LessonJSX } from './Lesson-js.jsx';
+export { LocalFiles as LocalFilesJSX } from './LocalFiles-js.jsx';
+export { MediaLibrary as MediaLibraryJSX } from './MediaLibrary-js.jsx';
+export { Podcast as PodcastJSX } from './Podcast-js.jsx';
+export { Preferences as PreferencesJSX } from './Preferences-js.jsx';
+export { ProductGallery as ProductGalleryJSX } from './ProductGallery-js.jsx';
+export { States as StatesJSX } from './States-js.jsx';
+export { ThemeComposition as ThemeCompositionJSX } from './ThemeComposition-js.jsx';

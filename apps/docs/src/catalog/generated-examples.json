@@ -1,0 +1,1800 @@
+[
+  {
+    "id": "Field",
+    "name": "Field",
+    "group": "Formulários",
+    "description": "Associe um rótulo, uma descrição e um erro ao campo.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "description?",
+        "type": "string"
+      },
+      {
+        "name": "error?",
+        "type": "string"
+      },
+      {
+        "name": "required?",
+        "type": "boolean"
+      },
+      {
+        "name": "children",
+        "type": "ReactElement"
+      }
+    ],
+    "snippet": "<DS.Field label=\"Nome\" description=\"Como você quer ser chamado?\"><DS.Input name=\"name\" autoComplete=\"name\" /></DS.Field>",
+    "variants": [
+      "default",
+      "invalid"
+    ],
+    "keyboard": "Tab leva ao campo associado.",
+    "requirements": "Use um único controle por Field. O rótulo identifica o campo; a descrição explica o formato e o erro indica como corrigir.",
+    "tsx": "import { Field, Input } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Nome\" description=\"Como você quer ser chamado?\">\n      <Input name=\"name\" autoComplete=\"name\" />\n    </Field>\n  );\n}\n",
+    "jsx": "import { Field, Input } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Nome\" description=\"Como você quer ser chamado?\">\n      <Input name=\"name\" autoComplete=\"name\" />\n    </Field>\n  );\n}\n"
+  },
+  {
+    "id": "Input",
+    "name": "Input",
+    "group": "Formulários",
+    "description": "Receba uma informação em uma única linha.",
+    "props": [
+      {
+        "name": "type?",
+        "type": "InputProps.type"
+      },
+      {
+        "name": "id?",
+        "type": "string"
+      },
+      {
+        "name": "value?",
+        "type": "string"
+      },
+      {
+        "name": "onChange?",
+        "type": "ChangeEventHandler"
+      }
+    ],
+    "snippet": "<DS.Field label=\"Email\"><DS.Input type=\"email\" name=\"email\" autoComplete=\"email\" /></DS.Field>",
+    "variants": [
+      "default",
+      "disabled",
+      "invalid"
+    ],
+    "keyboard": "Tab move o foco; as teclas de edição seguem o comportamento nativo.",
+    "requirements": "Associe um rótulo com Field. Use type e autocomplete adequados; placeholder não substitui o rótulo.",
+    "tsx": "import { Field, Input } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Email\">\n      <Input type=\"email\" name=\"email\" autoComplete=\"email\" />\n    </Field>\n  );\n}\n",
+    "jsx": "import { Field, Input } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Email\">\n      <Input type=\"email\" name=\"email\" autoComplete=\"email\" />\n    </Field>\n  );\n}\n"
+  },
+  {
+    "id": "Textarea",
+    "name": "Textarea",
+    "group": "Formulários",
+    "description": "Receba textos com várias linhas.",
+    "props": [
+      {
+        "name": "rows?",
+        "type": "number"
+      },
+      {
+        "name": "value?",
+        "type": "string"
+      },
+      {
+        "name": "onChange?",
+        "type": "ChangeEventHandler"
+      }
+    ],
+    "snippet": "<DS.Field label=\"Mensagem\"><DS.Textarea name=\"message\" rows={3} /></DS.Field>",
+    "variants": [
+      "default",
+      "disabled",
+      "invalid"
+    ],
+    "keyboard": "Enter cria uma linha; Tab sai do campo.",
+    "requirements": "Use Field para o rótulo e as instruções. Não limite a altura de modo que o texto fique inacessível.",
+    "tsx": "import { Field, Textarea } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Mensagem\">\n      <Textarea name=\"message\" rows={3} />\n    </Field>\n  );\n}\n",
+    "jsx": "import { Field, Textarea } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Mensagem\">\n      <Textarea name=\"message\" rows={3} />\n    </Field>\n  );\n}\n"
+  },
+  {
+    "id": "Select",
+    "name": "Select",
+    "group": "Formulários",
+    "description": "Escolha uma opção em uma lista nativa.",
+    "props": [
+      {
+        "name": "value?",
+        "type": "string"
+      },
+      {
+        "name": "onChange?",
+        "type": "ChangeEventHandler"
+      },
+      {
+        "name": "disabled?",
+        "type": "boolean"
+      }
+    ],
+    "snippet": "<DS.Field label=\"Formato\"><DS.Select defaultValue=\"audio\"><option value=\"audio\">Áudio</option><option value=\"video\">Vídeo</option></DS.Select></DS.Field>",
+    "variants": [
+      "default",
+      "disabled",
+      "invalid"
+    ],
+    "keyboard": "Use as setas para escolher. A abertura da lista segue o navegador e o sistema operacional.",
+    "requirements": "Nomeie o campo com Field e escreva opções que façam sentido fora do contexto visual.",
+    "tsx": "import { Field, Select } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Formato\">\n      <Select defaultValue=\"audio\">\n        <option value=\"audio\">Áudio</option>\n        <option value=\"video\">Vídeo</option>\n      </Select>\n    </Field>\n  );\n}\n",
+    "jsx": "import { Field, Select } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Field label=\"Formato\">\n      <Select defaultValue=\"audio\">\n        <option value=\"audio\">Áudio</option>\n        <option value=\"video\">Vídeo</option>\n      </Select>\n    </Field>\n  );\n}\n"
+  },
+  {
+    "id": "Checkbox",
+    "name": "Checkbox",
+    "group": "Formulários",
+    "description": "Marque uma opção independente.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "checked?",
+        "type": "boolean"
+      },
+      {
+        "name": "defaultChecked?",
+        "type": "boolean"
+      },
+      {
+        "name": "name?",
+        "type": "string"
+      }
+    ],
+    "snippet": "<DS.Checkbox label=\"Incluir transcrição\" />",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Espaço marca ou desmarca; Tab avança.",
+    "requirements": "Use um rótulo que descreva a escolha. Para várias opções relacionadas, acrescente um fieldset com legend.",
+    "tsx": "import { Checkbox } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Checkbox label=\"Incluir transcrição\" />;\n}\n",
+    "jsx": "import { Checkbox } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Checkbox label=\"Incluir transcrição\" />;\n}\n"
+  },
+  {
+    "id": "RadioGroup",
+    "name": "RadioGroup",
+    "group": "Formulários",
+    "description": "Escolha uma opção entre alternativas.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "options",
+        "type": "RadioOption[]"
+      },
+      {
+        "name": "value?",
+        "type": "string"
+      },
+      {
+        "name": "onValueChange?",
+        "type": "(value:string)=>void"
+      }
+    ],
+    "snippet": "<DS.RadioGroup label=\"Qualidade\" name=\"quality\" defaultValue=\"standard\" options={[{value:\"standard\",label:\"Padrão\"},{value:\"high\",label:\"Alta\"}]} />",
+    "variants": [
+      "default",
+      "disabled",
+      "invalid"
+    ],
+    "keyboard": "Tab entra no grupo; as setas mudam a opção.",
+    "requirements": "Dê um nome ao grupo e a cada opção. Use o mesmo name dentro do grupo e nomes diferentes entre grupos.",
+    "tsx": "import { RadioGroup } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <RadioGroup\n      label=\"Qualidade\"\n      name=\"quality\"\n      defaultValue=\"standard\"\n      options={[\n        { value: \"standard\", label: \"Padrão\" },\n        { value: \"high\", label: \"Alta\" },\n      ]}\n    />\n  );\n}\n",
+    "jsx": "import { RadioGroup } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <RadioGroup\n      label=\"Qualidade\"\n      name=\"quality\"\n      defaultValue=\"standard\"\n      options={[\n        { value: \"standard\", label: \"Padrão\" },\n        { value: \"high\", label: \"Alta\" },\n      ]}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Switch",
+    "name": "Switch",
+    "group": "Formulários",
+    "description": "Ative ou desative uma configuração.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "checked?",
+        "type": "boolean"
+      },
+      {
+        "name": "onCheckedChange?",
+        "type": "(value:boolean)=>void"
+      },
+      {
+        "name": "disabled?",
+        "type": "boolean"
+      }
+    ],
+    "snippet": "<DS.Switch label=\"Mostrar legendas\" />",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Espaço alterna o estado.",
+    "requirements": "Mantenha o rótulo estável e descreva a configuração, como “Mostrar legendas”. O estado é anunciado pelo controle.",
+    "tsx": "import { Switch } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Switch label=\"Mostrar legendas\" />;\n}\n",
+    "jsx": "import { Switch } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Switch label=\"Mostrar legendas\" />;\n}\n"
+  },
+  {
+    "id": "Tabs",
+    "name": "Tabs",
+    "group": "Navegação",
+    "description": "Organize conteúdos relacionados em abas.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "items",
+        "type": "TabItem[]"
+      },
+      {
+        "name": "value?",
+        "type": "string"
+      },
+      {
+        "name": "orientation?",
+        "type": "horizontal ou vertical"
+      }
+    ],
+    "snippet": "<DS.Tabs label=\"Conteúdo\" items={[{value:\"one\",label:\"Descrição\",content:\"Descrição da mídia\"},{value:\"two\",label:\"Informações\",content:\"Outras informações\"}]}/>",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Setas movem o foco; Enter ou Espaço ativa a aba. Home e End vão às extremidades.",
+    "requirements": "Use títulos curtos. O painel inativo fica oculto; não use abas como navegação entre páginas.",
+    "tsx": "import { Tabs } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Tabs\n      label=\"Conteúdo\"\n      items={[\n        { value: \"one\", label: \"Descrição\", content: \"Descrição da mídia\" },\n        { value: \"two\", label: \"Informações\", content: \"Outras informações\" },\n      ]}\n    />\n  );\n}\n",
+    "jsx": "import { Tabs } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Tabs\n      label=\"Conteúdo\"\n      items={[\n        { value: \"one\", label: \"Descrição\", content: \"Descrição da mídia\" },\n        { value: \"two\", label: \"Informações\", content: \"Outras informações\" },\n      ]}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Accordion",
+    "name": "Accordion",
+    "group": "Navegação",
+    "description": "Mostre detalhes sob demanda.",
+    "props": [
+      {
+        "name": "items",
+        "type": "AccordionItem[]"
+      },
+      {
+        "name": "value?",
+        "type": "string[]"
+      },
+      {
+        "name": "onValueChange?",
+        "type": "(ids:string[])=>void"
+      }
+    ],
+    "snippet": "<DS.Accordion items={[{id:\"details\",title:\"Detalhes da mídia\",content:\"Conteúdo complementar\"}]}/>",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Enter ou Espaço expande e recolhe cada seção.",
+    "requirements": "Use títulos que antecipem o conteúdo. Mantenha informações essenciais visíveis fora do acordeão.",
+    "tsx": "import { Accordion } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Accordion\n      items={[\n        {\n          id: \"details\",\n          title: \"Detalhes da mídia\",\n          content: \"Conteúdo complementar\",\n        },\n      ]}\n    />\n  );\n}\n",
+    "jsx": "import { Accordion } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Accordion\n      items={[\n        {\n          id: \"details\",\n          title: \"Detalhes da mídia\",\n          content: \"Conteúdo complementar\",\n        },\n      ]}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Breadcrumbs",
+    "name": "Breadcrumbs",
+    "group": "Navegação",
+    "description": "Mostre o caminho até a página atual.",
+    "props": [
+      {
+        "name": "items",
+        "type": "Array<{label;href?}>"
+      },
+      {
+        "name": "label?",
+        "type": "string"
+      }
+    ],
+    "snippet": "<DS.Breadcrumbs items={[{label:\"Início\",href:\"/\"},{label:\"Mídia atual\"}]}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os links anteriores.",
+    "requirements": "A última etapa representa a página atual. Dê nomes descritivos aos destinos.",
+    "tsx": "import { Breadcrumbs } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Breadcrumbs\n      items={[{ label: \"Início\", href: \"/\" }, { label: \"Mídia atual\" }]}\n    />\n  );\n}\n",
+    "jsx": "import { Breadcrumbs } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Breadcrumbs\n      items={[{ label: \"Início\", href: \"/\" }, { label: \"Mídia atual\" }]}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Pagination",
+    "name": "Pagination",
+    "group": "Navegação",
+    "description": "Divida uma coleção em páginas.",
+    "props": [
+      {
+        "name": "page",
+        "type": "number (base 1)"
+      },
+      {
+        "name": "pageCount",
+        "type": "number"
+      },
+      {
+        "name": "onPageChange",
+        "type": "(page:number)=>void"
+      }
+    ],
+    "snippet": "<DS.Pagination page={page} pageCount={12} onPageChange={setPage}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os botões; Enter ou Espaço troca a página.",
+    "requirements": "Atualize o conteúdo ao mudar page. Mantenha o foco previsível e informe a quantidade de resultados.",
+    "tsx": "import { useState } from \"react\";\nimport { Pagination } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [page, setPage] = useState(1);\n  return <Pagination page={page} pageCount={12} onPageChange={setPage} />;\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Pagination } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [page, setPage] = useState(1);\n  return <Pagination page={page} pageCount={12} onPageChange={setPage} />;\n}\n"
+  },
+  {
+    "id": "Alert",
+    "name": "Alert",
+    "group": "Feedback",
+    "description": "Destaque uma mensagem importante.",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode"
+      },
+      {
+        "name": "tone?",
+        "type": "info/success/warning/error"
+      },
+      {
+        "name": "announce?",
+        "type": "off/polite/assertive"
+      }
+    ],
+    "snippet": "<DS.Alert title=\"Informação\">O conteúdo está disponível.</DS.Alert>",
+    "variants": [
+      "default",
+      "invalid"
+    ],
+    "keyboard": "A mensagem não exige foco. Ações inseridas nela seguem a navegação normal.",
+    "requirements": "Use announce apenas para mensagens novas. Erros devem explicar o problema e a próxima ação.",
+    "tsx": "import { Alert } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Alert title=\"Informação\">O conteúdo está disponível.</Alert>;\n}\n",
+    "jsx": "import { Alert } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Alert title=\"Informação\">O conteúdo está disponível.</Alert>;\n}\n"
+  },
+  {
+    "id": "Progress",
+    "name": "Progress",
+    "group": "Feedback",
+    "description": "Mostre o avanço de uma tarefa.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "value?",
+        "type": "number"
+      },
+      {
+        "name": "max?",
+        "type": "number"
+      }
+    ],
+    "snippet": "<DS.Progress label=\"Processamento\" value={40} max={100}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O indicador não é interativo.",
+    "requirements": "Dê um nome à tarefa. Omita value se a duração for desconhecida; não anuncie cada atualização em uma região viva.",
+    "tsx": "import { Progress } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Progress label=\"Processamento\" value={40} max={100} />;\n}\n",
+    "jsx": "import { Progress } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Progress label=\"Processamento\" value={40} max={100} />;\n}\n"
+  },
+  {
+    "id": "Skeleton",
+    "name": "Skeleton",
+    "group": "Feedback",
+    "description": "Reserve espaço enquanto o conteúdo carrega.",
+    "props": [
+      {
+        "name": "label?",
+        "type": "string"
+      },
+      {
+        "name": "width?",
+        "type": "CSSProperties.width"
+      },
+      {
+        "name": "height?",
+        "type": "CSSProperties.height"
+      }
+    ],
+    "snippet": "<DS.Skeleton label=\"Carregando mídia\" height=\"8rem\"/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O esqueleto não recebe foco.",
+    "requirements": "Use um único aviso de carregamento por região. Remova o esqueleto quando o conteúdo estiver disponível.",
+    "tsx": "import { Skeleton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Skeleton label=\"Carregando mídia\" height=\"8rem\" />;\n}\n",
+    "jsx": "import { Skeleton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <Skeleton label=\"Carregando mídia\" height=\"8rem\" />;\n}\n"
+  },
+  {
+    "id": "EmptyState",
+    "name": "EmptyState",
+    "group": "Feedback",
+    "description": "Explique por que uma coleção está vazia.",
+    "props": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "description?",
+        "type": "string"
+      },
+      {
+        "name": "action?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.EmptyState title=\"Nenhum resultado\" description=\"Altere os termos da busca.\"/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Apenas a ação opcional recebe foco.",
+    "requirements": "Diferencie ausência de conteúdo e busca sem resultados. Sugira uma ação útil quando houver.",
+    "tsx": "import { EmptyState } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <EmptyState\n      title=\"Nenhum resultado\"\n      description=\"Altere os termos da busca.\"\n    />\n  );\n}\n",
+    "jsx": "import { EmptyState } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <EmptyState\n      title=\"Nenhum resultado\"\n      description=\"Altere os termos da busca.\"\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Status",
+    "name": "Status",
+    "group": "Feedback",
+    "description": "Anuncie o resultado de uma ação sem mover o foco.",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode"
+      },
+      {
+        "name": "error?",
+        "type": "boolean"
+      }
+    ],
+    "snippet": "<><DS.Button onClick={()=>setAction(\"Preferências salvas.\")}>Salvar preferências</DS.Button><DS.Status>{action}</DS.Status></>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O foco permanece no controle usado.",
+    "requirements": "Escreva mensagens curtas e mantenha a região montada antes de atualizar seu texto. Não a use como histórico de eventos.",
+    "tsx": "import { useState } from \"react\";\nimport { Button, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <Button onClick={() => setAction(\"Preferências salvas.\")}>\n        Salvar preferências\n      </Button>\n      <Status>{action}</Status>\n    </>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Button, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <Button onClick={() => setAction(\"Preferências salvas.\")}>\n        Salvar preferências\n      </Button>\n      <Status>{action}</Status>\n    </>\n  );\n}\n"
+  },
+  {
+    "id": "MediaLoading",
+    "name": "MediaLoading",
+    "group": "Feedback",
+    "description": "Informe que a mídia está carregando.",
+    "props": [
+      {
+        "name": "label?",
+        "type": "string"
+      }
+    ],
+    "snippet": "<DS.MediaLoading/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "A mensagem não recebe foco.",
+    "requirements": "Use durante uma espera real. Evite repetir o mesmo aviso em outras regiões vivas.",
+    "tsx": "import { MediaLoading } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <MediaLoading />;\n}\n",
+    "jsx": "import { MediaLoading } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <MediaLoading />;\n}\n"
+  },
+  {
+    "id": "MediaUnavailable",
+    "name": "MediaUnavailable",
+    "group": "Feedback",
+    "description": "Explique que uma mídia não está disponível.",
+    "props": [
+      {
+        "name": "title?",
+        "type": "string"
+      },
+      {
+        "name": "description?",
+        "type": "string"
+      }
+    ],
+    "snippet": "<DS.MediaUnavailable/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "A mensagem não recebe foco.",
+    "requirements": "Se houver uma alternativa, ofereça um link ou ação com nome claro.",
+    "tsx": "import { MediaUnavailable } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <MediaUnavailable />;\n}\n",
+    "jsx": "import { MediaUnavailable } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return <MediaUnavailable />;\n}\n"
+  },
+  {
+    "id": "MediaErrorState",
+    "name": "MediaErrorState",
+    "group": "Feedback",
+    "description": "Apresente uma falha e permita tentar novamente.",
+    "props": [
+      {
+        "name": "message?",
+        "type": "string"
+      },
+      {
+        "name": "onRetry?",
+        "type": "()=>void"
+      }
+    ],
+    "snippet": "<><DS.MediaErrorState onRetry={()=>setAction(\"Nova tentativa solicitada.\")}/><DS.Status>{action}</DS.Status></>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab chega à ação; Enter ou Espaço tenta novamente.",
+    "requirements": "Conecte onRetry à recuperação real e preserve o contexto do usuário.",
+    "tsx": "import { useState } from \"react\";\nimport { MediaErrorState, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <MediaErrorState\n        onRetry={() => setAction(\"Nova tentativa solicitada.\")}\n      />\n      <Status>{action}</Status>\n    </>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { MediaErrorState, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <MediaErrorState\n        onRetry={() => setAction(\"Nova tentativa solicitada.\")}\n      />\n      <Status>{action}</Status>\n    </>\n  );\n}\n"
+  },
+  {
+    "id": "Card",
+    "name": "Card",
+    "group": "Composição",
+    "description": "Agrupe informações relacionadas.",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode"
+      },
+      {
+        "name": "...props",
+        "type": "HTMLAttributes<HTMLDivElement>"
+      }
+    ],
+    "snippet": "<DS.Card><p>Informações da mídia</p></DS.Card>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Apenas links e controles internos recebem foco.",
+    "requirements": "Use um título para identificar o conteúdo. Evite tornar todo o card clicável se ele tiver outras ações.",
+    "tsx": "import { Card } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Card>\n      <p>Informações da mídia</p>\n    </Card>\n  );\n}\n",
+    "jsx": "import { Card } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <Card>\n      <p>Informações da mídia</p>\n    </Card>\n  );\n}\n"
+  },
+  {
+    "id": "Separator",
+    "name": "Separator",
+    "group": "Composição",
+    "description": "Separe grupos de conteúdo.",
+    "props": [
+      {
+        "name": "orientation?",
+        "type": "horizontal/vertical"
+      },
+      {
+        "name": "decorative?",
+        "type": "boolean"
+      }
+    ],
+    "snippet": "<><p>Primeira seção</p><DS.Separator decorative={false}/><p>Segunda seção</p></>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O separador não recebe foco.",
+    "requirements": "Use decorative para uma linha apenas visual. Use decorative={false} quando a divisão tiver significado.",
+    "tsx": "import { Separator } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <>\n      <p>Primeira seção</p>\n      <Separator decorative={false} />\n      <p>Segunda seção</p>\n    </>\n  );\n}\n",
+    "jsx": "import { Separator } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <>\n      <p>Primeira seção</p>\n      <Separator decorative={false} />\n      <p>Segunda seção</p>\n    </>\n  );\n}\n"
+  },
+  {
+    "id": "VisuallyHidden",
+    "name": "VisuallyHidden",
+    "group": "Composição",
+    "description": "Mantenha um texto acessível sem exibi-lo visualmente.",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode"
+      },
+      {
+        "name": "...props",
+        "type": "HTMLAttributes"
+      }
+    ],
+    "snippet": "<DS.Button aria-pressed={checked} onClick={()=>setChecked(!checked)}><span aria-hidden=\"true\">☆</span><DS.VisuallyHidden>Favoritar mídia</DS.VisuallyHidden></DS.Button>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O texto não cria uma parada de foco.",
+    "requirements": "Use para nomes ou instruções complementares. Informações essenciais para todos devem continuar visíveis.",
+    "tsx": "import { useState } from \"react\";\nimport { Button, VisuallyHidden } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return (\n    <Button aria-pressed={checked} onClick={() => setChecked(!checked)}>\n      <span aria-hidden=\"true\">☆</span>\n      <VisuallyHidden>Favoritar mídia</VisuallyHidden>\n    </Button>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Button, VisuallyHidden } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return (\n    <Button aria-pressed={checked} onClick={() => setChecked(!checked)}>\n      <span aria-hidden=\"true\">☆</span>\n      <VisuallyHidden>Favoritar mídia</VisuallyHidden>\n    </Button>\n  );\n}\n"
+  },
+  {
+    "id": "MediaRoot",
+    "name": "MediaRoot",
+    "group": "Composição",
+    "description": "Compartilhe o estado da mídia entre controles.",
+    "props": [
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "kind",
+        "type": "audio ou video"
+      },
+      {
+        "name": "adapterFactory",
+        "type": "AdapterFactory"
+      },
+      {
+        "name": "children",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"audio\" source={{type:\"file\",src:\"/fixtures/media/sample.mp3\"}} adapterFactory={autoAdapter}><DS.MediaHost/><DS.PlayerControls/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Cada controle mantém suas próprias teclas.",
+    "requirements": "Monte MediaHost dentro do contexto e nomeie os controles. O exemplo usa o adaptador automático para carregar a fonte.",
+    "tsx": "import { MediaRoot, MediaHost, PlayerControls } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"audio\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp3\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <PlayerControls />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, PlayerControls } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"audio\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp3\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <PlayerControls />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "MediaCard",
+    "name": "MediaCard",
+    "group": "Coleções",
+    "description": "Apresente uma mídia com seleção opcional.",
+    "props": [
+      {
+        "name": "item",
+        "type": "MediaItem"
+      },
+      {
+        "name": "selected?",
+        "type": "boolean"
+      },
+      {
+        "name": "onSelect?",
+        "type": "(selected:boolean)=>void"
+      },
+      {
+        "name": "action?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.MediaCard item={items[0]} selected={checked} onSelect={setChecked}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre a seleção e as ações.",
+    "requirements": "Forneça título e texto alternativo da imagem. Selecionar e abrir são ações distintas.",
+    "tsx": "import { useState } from \"react\";\nimport { MediaCard } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nconst items = images.map((image, i) => ({\n  id: String(i),\n  title: image.caption,\n  image,\n}));\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return <MediaCard item={items[0]} selected={checked} onSelect={setChecked} />;\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { MediaCard } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nconst items = images.map((image, i) => ({\n  id: String(i),\n  title: image.caption,\n  image,\n}));\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return <MediaCard item={items[0]} selected={checked} onSelect={setChecked} />;\n}\n"
+  },
+  {
+    "id": "MediaGrid",
+    "name": "MediaGrid",
+    "group": "Coleções",
+    "description": "Mostre mídias em uma grade.",
+    "props": [
+      {
+        "name": "items",
+        "type": "MediaItem[]"
+      },
+      {
+        "name": "selectedIds?",
+        "type": "string[]"
+      },
+      {
+        "name": "onSelectionChange?",
+        "type": "(ids:string[])=>void"
+      },
+      {
+        "name": "renderAction?",
+        "type": "(item:MediaItem)=>ReactNode"
+      }
+    ],
+    "snippet": "<DS.MediaGrid items={items} selectedIds={selected} onSelectionChange={setSelected}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os controles na ordem dos itens.",
+    "requirements": "Use títulos distintos e imagens com alternativas adequadas. Atualize selectedIds em onSelectionChange.",
+    "tsx": "import { useState } from \"react\";\nimport { MediaGrid } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nconst items = images.map((image, i) => ({\n  id: String(i),\n  title: image.caption,\n  image,\n}));\nexport function Example() {\n  const [selected, setSelected] = useState<string[]>([]);\n  return (\n    <MediaGrid\n      items={items}\n      selectedIds={selected}\n      onSelectionChange={setSelected}\n    />\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { MediaGrid } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nconst items = images.map((image, i) => ({\n  id: String(i),\n  title: image.caption,\n  image,\n}));\nexport function Example() {\n  const [selected, setSelected] = useState([]);\n  return (\n    <MediaGrid\n      items={items}\n      selectedIds={selected}\n      onSelectionChange={setSelected}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "MediaList",
+    "name": "MediaList",
+    "group": "Coleções",
+    "description": "Mostre mídias em uma lista.",
+    "props": [
+      {
+        "name": "items",
+        "type": "MediaItem[]"
+      },
+      {
+        "name": "selectedIds?",
+        "type": "string[]"
+      },
+      {
+        "name": "onSelectionChange?",
+        "type": "(ids:string[])=>void"
+      }
+    ],
+    "snippet": "<DS.MediaList items={items} selectedIds={selected} onSelectionChange={setSelected}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os controles na ordem dos itens.",
+    "requirements": "Use títulos claros e preserve a seleção ao atualizar a coleção.",
+    "tsx": "import { useState } from \"react\";\nimport { MediaList } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nconst items = images.map((image, i) => ({\n  id: String(i),\n  title: image.caption,\n  image,\n}));\nexport function Example() {\n  const [selected, setSelected] = useState<string[]>([]);\n  return (\n    <MediaList\n      items={items}\n      selectedIds={selected}\n      onSelectionChange={setSelected}\n    />\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { MediaList } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nconst items = images.map((image, i) => ({\n  id: String(i),\n  title: image.caption,\n  image,\n}));\nexport function Example() {\n  const [selected, setSelected] = useState([]);\n  return (\n    <MediaList\n      items={items}\n      selectedIds={selected}\n      onSelectionChange={setSelected}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Image",
+    "name": "Image",
+    "group": "Imagens",
+    "description": "Exiba uma imagem com texto alternativo.",
+    "props": [
+      {
+        "name": "image",
+        "type": "ImageData"
+      },
+      {
+        "name": "retry?",
+        "type": "boolean"
+      }
+    ],
+    "snippet": "<DS.Image image={images[0]}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "A imagem não recebe foco.",
+    "requirements": "Descreva a informação relevante em alt. Para uma imagem decorativa, use o contrato decorativo do componente.",
+    "tsx": "import { Image } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Image image={images[0]} />;\n}\n",
+    "jsx": "import { Image } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Image image={images[0]} />;\n}\n"
+  },
+  {
+    "id": "Figure",
+    "name": "Figure",
+    "group": "Imagens",
+    "description": "Combine uma imagem e sua legenda.",
+    "props": [
+      {
+        "name": "image",
+        "type": "ImageData"
+      }
+    ],
+    "snippet": "<DS.Figure image={images[0]}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "A figura não recebe foco.",
+    "requirements": "A legenda contextualiza a imagem; alt descreve a informação visual. Evite repetir exatamente o mesmo texto.",
+    "tsx": "import { Figure } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Figure image={images[0]} />;\n}\n",
+    "jsx": "import { Figure } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Figure image={images[0]} />;\n}\n"
+  },
+  {
+    "id": "Gallery",
+    "name": "Gallery",
+    "group": "Imagens",
+    "description": "Explore e amplie uma coleção de imagens.",
+    "props": [
+      {
+        "name": "items",
+        "type": "ImageData[]"
+      }
+    ],
+    "snippet": "<DS.Gallery items={images}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre as miniaturas; Enter abre a imagem. Escape fecha o visualizador.",
+    "requirements": "Escreva alt para cada imagem e diferencie as miniaturas por seus nomes.",
+    "tsx": "import { Gallery } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Gallery items={images} />;\n}\n",
+    "jsx": "import { Gallery } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Gallery items={images} />;\n}\n"
+  },
+  {
+    "id": "ImageViewer",
+    "name": "ImageViewer",
+    "group": "Imagens",
+    "description": "Amplie uma imagem em um diálogo.",
+    "props": [
+      {
+        "name": "items",
+        "type": "ImageData[]"
+      },
+      {
+        "name": "activeId",
+        "type": "string ou null"
+      },
+      {
+        "name": "onActiveChange",
+        "type": "(id:string ou null)=>void"
+      },
+      {
+        "name": "returnFocusRef?",
+        "type": "RefObject"
+      }
+    ],
+    "snippet": "<><DS.Button onClick={()=>setActive(images[0].id)}>Abrir visualizador</DS.Button><DS.ImageViewer items={images} activeId={active} onActiveChange={setActive}/></>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Escape fecha; ao fechar, o foco retorna ao acionador disponível.",
+    "requirements": "Forneça imagens com alt e mantenha o botão que abriu o visualizador montado.",
+    "tsx": "import { useState } from \"react\";\nimport { Button, ImageViewer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  const [active, setActive] = useState<string | null>(null);\n  return (\n    <>\n      <Button onClick={() => setActive(images[0].id)}>\n        Abrir visualizador\n      </Button>\n      <ImageViewer\n        items={images}\n        activeId={active}\n        onActiveChange={setActive}\n      />\n    </>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Button, ImageViewer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  const [active, setActive] = useState(null);\n  return (\n    <>\n      <Button onClick={() => setActive(images[0].id)}>\n        Abrir visualizador\n      </Button>\n      <ImageViewer\n        items={images}\n        activeId={active}\n        onActiveChange={setActive}\n      />\n    </>\n  );\n}\n"
+  },
+  {
+    "id": "Carousel",
+    "name": "Carousel",
+    "group": "Imagens",
+    "description": "Exiba uma imagem por vez, sem rotação automática.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "items",
+        "type": "ImageData[]"
+      },
+      {
+        "name": "index?",
+        "type": "number"
+      },
+      {
+        "name": "onIndexChange?",
+        "type": "(index:number)=>void"
+      }
+    ],
+    "snippet": "<DS.Carousel label=\"Paisagens\" items={images}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab chega aos botões; Enter ou Espaço muda a imagem.",
+    "requirements": "Nomeie a coleção e forneça alt para cada imagem. As imagens inativas não ficam na ordem de foco.",
+    "tsx": "import { Carousel } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Carousel label=\"Paisagens\" items={images} />;\n}\n",
+    "jsx": "import { Carousel } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return <Carousel label=\"Paisagens\" items={images} />;\n}\n"
+  },
+  {
+    "id": "ImageComparison",
+    "name": "ImageComparison",
+    "group": "Imagens",
+    "description": "Compare duas imagens com controles de posição.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "before",
+        "type": "ImageData"
+      },
+      {
+        "name": "after",
+        "type": "ImageData"
+      },
+      {
+        "name": "value?",
+        "type": "number"
+      }
+    ],
+    "snippet": "<DS.ImageComparison label=\"Comparar paisagens\" before={images[0]} after={images[1]}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Use as setas no controle deslizante ou os botões. A opção lado a lado dispensa arrastar.",
+    "requirements": "Descreva cada imagem e a diferença relevante. Não dependa apenas da sobreposição para explicar a comparação.",
+    "tsx": "import { ImageComparison } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return (\n    <ImageComparison\n      label=\"Comparar paisagens\"\n      before={images[0]}\n      after={images[1]}\n    />\n  );\n}\n",
+    "jsx": "import { ImageComparison } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst images = [\n  {\n    id: \"one\",\n    src: \"/illustrations/mountains.svg\",\n    alt: \"Duas montanhas com neve nos picos.\",\n    caption: \"Montanhas\",\n  },\n  {\n    id: \"two\",\n    src: \"/illustrations/coast.svg\",\n    alt: \"Barco perto da praia.\",\n    caption: \"Litoral\",\n  },\n];\nexport function Example() {\n  return (\n    <ImageComparison\n      label=\"Comparar paisagens\"\n      before={images[0]}\n      after={images[1]}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "VideoPlayer",
+    "name": "VideoPlayer",
+    "group": "Reprodução",
+    "description": "Reproduza um vídeo por URL.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "tracks?",
+        "type": "TextTrackInput[]"
+      },
+      {
+        "name": "children?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"Minha mídia\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os controles. Os atalhos do player só atuam dentro dele e fora de campos de edição.",
+    "requirements": "Forneça legendas para a fala e sons relevantes, transcrição e audiodescrição quando necessárias.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Minha mídia\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Minha mídia\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "AudioPlayer",
+    "name": "AudioPlayer",
+    "group": "Reprodução",
+    "description": "Reproduza um áudio por URL.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "tracks?",
+        "type": "TextTrackInput[]"
+      },
+      {
+        "name": "children?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.AudioPlayer label=\"Minha mídia\" source={{type:\"file\",src:\"/fixtures/media/sample.mp3\"}}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os controles; Enter ou Espaço aciona os botões.",
+    "requirements": "Dê um título ao áudio e ofereça uma transcrição equivalente ao conteúdo.",
+    "tsx": "import { AudioPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <AudioPlayer\n      label=\"Minha mídia\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp3\" }}\n    />\n  );\n}\n",
+    "jsx": "import { AudioPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <AudioPlayer\n      label=\"Minha mídia\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp3\" }}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "CompactAudioPlayer",
+    "name": "CompactAudioPlayer",
+    "group": "Reprodução",
+    "description": "Reproduza áudio em um espaço menor.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "tracks?",
+        "type": "TextTrackInput[]"
+      },
+      {
+        "name": "children?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.CompactAudioPlayer label=\"Minha mídia\" source={{type:\"file\",src:\"/fixtures/media/sample.mp3\"}}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os controles disponíveis.",
+    "requirements": "Use um título claro e ofereça transcrição. O tamanho compacto não elimina a necessidade de alternativas.",
+    "tsx": "import { CompactAudioPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <CompactAudioPlayer\n      label=\"Minha mídia\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp3\" }}\n    />\n  );\n}\n",
+    "jsx": "import { CompactAudioPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <CompactAudioPlayer\n      label=\"Minha mídia\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp3\" }}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "MediaSourcePlayer",
+    "name": "MediaSourcePlayer",
+    "group": "Reprodução",
+    "description": "Alterne entre fontes da mesma mídia.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "sources",
+        "type": "SourceOption[]"
+      },
+      {
+        "name": "value",
+        "type": "string"
+      },
+      {
+        "name": "onValueChange",
+        "type": "(id:string)=>void"
+      }
+    ],
+    "snippet": "<DS.MediaSourcePlayer label=\"Versões\" sources={sources} value={value} onValueChange={setValue}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O seletor mantém o foco ao trocar a fonte.",
+    "requirements": "Use fontes equivalentes para preservar a posição. Nomeie as versões e forneça as alternativas de cada uma.",
+    "tsx": "import { useState } from \"react\";\nimport { SourceOption, MediaSourcePlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst sources: SourceOption[] = [\n  {\n    id: \"one\",\n    label: \"Original\",\n    source: { type: \"file\", src: \"/fixtures/media/sample.mp4\" },\n  },\n  {\n    id: \"two\",\n    label: \"Descrita\",\n    source: { type: \"file\", src: \"/fixtures/media/described.mp4\" },\n  },\n];\nexport function Example() {\n  const [value, setValue] = useState(\"one\");\n  return (\n    <MediaSourcePlayer\n      label=\"Versões\"\n      sources={sources}\n      value={value}\n      onValueChange={setValue}\n    />\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { MediaSourcePlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst sources = [\n  {\n    id: \"one\",\n    label: \"Original\",\n    source: { type: \"file\", src: \"/fixtures/media/sample.mp4\" },\n  },\n  {\n    id: \"two\",\n    label: \"Descrita\",\n    source: { type: \"file\", src: \"/fixtures/media/described.mp4\" },\n  },\n];\nexport function Example() {\n  const [value, setValue] = useState(\"one\");\n  return (\n    <MediaSourcePlayer\n      label=\"Versões\"\n      sources={sources}\n      value={value}\n      onValueChange={setValue}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "SourceSelector",
+    "name": "SourceSelector",
+    "group": "Reprodução",
+    "description": "Escolha a fonte de reprodução.",
+    "props": [
+      {
+        "name": "sources",
+        "type": "SourceOption[]"
+      },
+      {
+        "name": "value",
+        "type": "string"
+      },
+      {
+        "name": "onValueChange",
+        "type": "(id:string)=>void"
+      }
+    ],
+    "snippet": "<DS.SourceSelector sources={sources} value={value} onValueChange={setValue}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O seletor usa o teclado nativo do navegador.",
+    "requirements": "Conecte onValueChange ao player. Este controle sozinho não troca a mídia.",
+    "tsx": "import { useState } from \"react\";\nimport { SourceOption, SourceSelector } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst sources: SourceOption[] = [\n  {\n    id: \"one\",\n    label: \"Original\",\n    source: { type: \"file\", src: \"/fixtures/media/sample.mp4\" },\n  },\n  {\n    id: \"two\",\n    label: \"Descrita\",\n    source: { type: \"file\", src: \"/fixtures/media/described.mp4\" },\n  },\n];\nexport function Example() {\n  const [value, setValue] = useState(\"one\");\n  return (\n    <SourceSelector sources={sources} value={value} onValueChange={setValue} />\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { SourceSelector } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst sources = [\n  {\n    id: \"one\",\n    label: \"Original\",\n    source: { type: \"file\", src: \"/fixtures/media/sample.mp4\" },\n  },\n  {\n    id: \"two\",\n    label: \"Descrita\",\n    source: { type: \"file\", src: \"/fixtures/media/described.mp4\" },\n  },\n];\nexport function Example() {\n  const [value, setValue] = useState(\"one\");\n  return (\n    <SourceSelector sources={sources} value={value} onValueChange={setValue} />\n  );\n}\n"
+  },
+  {
+    "id": "PlayerControls",
+    "name": "PlayerControls",
+    "group": "Reprodução",
+    "description": "Adicione os controles principais a uma mídia.",
+    "props": [
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.PlayerControls/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os controles habilitados.",
+    "requirements": "Monte dentro de MediaRoot. Não duplique estes controles dentro de um player que já os oferece.",
+    "tsx": "import { MediaRoot, MediaHost, PlayerControls } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <PlayerControls />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, PlayerControls } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <PlayerControls />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "SeekControl",
+    "name": "SeekControl",
+    "group": "Reprodução",
+    "description": "Navegue pela linha do tempo.",
+    "props": [
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.SeekControl/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "As setas ajustam a posição no controle deslizante.",
+    "requirements": "Use dentro de MediaRoot. A navegação fica indisponível quando a fonte não permite buscar.",
+    "tsx": "import { MediaRoot, MediaHost, SeekControl } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <SeekControl />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, SeekControl } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <SeekControl />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "VolumeControl",
+    "name": "VolumeControl",
+    "group": "Reprodução",
+    "description": "Ajuste o volume ou silencie a mídia.",
+    "props": [
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.VolumeControl/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "As setas ajustam o volume; Enter ou Espaço aciona o botão de silêncio.",
+    "requirements": "Use dentro de MediaRoot. Em alguns dispositivos, o volume depende dos controles do sistema.",
+    "tsx": "import { MediaRoot, MediaHost, VolumeControl } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <VolumeControl />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, VolumeControl } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <VolumeControl />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "TimeDisplay",
+    "name": "TimeDisplay",
+    "group": "Reprodução",
+    "description": "Mostre o tempo atual e a duração.",
+    "props": [
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.TimeDisplay/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "A informação não recebe foco.",
+    "requirements": "Use dentro de MediaRoot. Evite tornar a contagem de segundos uma região viva.",
+    "tsx": "import { MediaRoot, MediaHost, TimeDisplay } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <TimeDisplay />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, TimeDisplay } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <TimeDisplay />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "LiveControl",
+    "name": "LiveControl",
+    "group": "Reprodução",
+    "description": "Retorne ao ponto mais recente de uma transmissão.",
+    "props": [
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"Ao vivo\" source={{type:\"hls\",src:\"/live-fixture/stream.m3u8?session=example\"}}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço aciona o retorno ao vivo quando disponível.",
+    "requirements": "Use uma fonte ao vivo com janela de navegação. O controle depende das capacidades informadas pelo provedor.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Ao vivo\"\n      source={{ type: \"hls\", src: \"/live-fixture/stream.m3u8?session=example\" }}\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Ao vivo\"\n      source={{ type: \"hls\", src: \"/live-fixture/stream.m3u8?session=example\" }}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "SeekBackButton",
+    "name": "SeekBackButton",
+    "group": "Reprodução",
+    "description": "Retroceda um intervalo de tempo.",
+    "props": [
+      {
+        "name": "seconds?",
+        "type": "number"
+      },
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.SeekBackButton/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço retrocede.",
+    "requirements": "Use dentro de MediaRoot e defina seconds para o intervalo desejado.",
+    "tsx": "import { MediaRoot, MediaHost, SeekBackButton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <SeekBackButton />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, SeekBackButton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <SeekBackButton />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "SeekForwardButton",
+    "name": "SeekForwardButton",
+    "group": "Reprodução",
+    "description": "Avance um intervalo de tempo.",
+    "props": [
+      {
+        "name": "seconds?",
+        "type": "number"
+      },
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.SeekForwardButton/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço avança.",
+    "requirements": "Use dentro de MediaRoot e defina seconds para o intervalo desejado.",
+    "tsx": "import {\n  MediaRoot,\n  MediaHost,\n  SeekForwardButton,\n} from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <SeekForwardButton />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import {\n  MediaRoot,\n  MediaHost,\n  SeekForwardButton,\n} from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <SeekForwardButton />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "Playlist",
+    "name": "Playlist",
+    "group": "Reprodução",
+    "description": "Escolha um item de uma sequência de mídias.",
+    "props": [
+      {
+        "name": "items",
+        "type": "Array<{id;title;source}>"
+      },
+      {
+        "name": "activeId",
+        "type": "string"
+      },
+      {
+        "name": "onSelect",
+        "type": "(id:string)=>void"
+      }
+    ],
+    "snippet": "<DS.Playlist items={sources.map(s=>({id:s.id,title:s.label,source:s.source}))} activeId={value} onSelect={setValue}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os episódios; Enter ou Espaço seleciona.",
+    "requirements": "Conecte a seleção ao player e use títulos que distingam os itens.",
+    "tsx": "import { useState } from \"react\";\nimport { SourceOption, Playlist } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst sources: SourceOption[] = [\n  {\n    id: \"one\",\n    label: \"Original\",\n    source: { type: \"file\", src: \"/fixtures/media/sample.mp4\" },\n  },\n  {\n    id: \"two\",\n    label: \"Descrita\",\n    source: { type: \"file\", src: \"/fixtures/media/described.mp4\" },\n  },\n];\nexport function Example() {\n  const [value, setValue] = useState(\"one\");\n  return (\n    <Playlist\n      items={sources.map((s) => ({\n        id: s.id,\n        title: s.label,\n        source: s.source,\n      }))}\n      activeId={value}\n      onSelect={setValue}\n    />\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Playlist } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst sources = [\n  {\n    id: \"one\",\n    label: \"Original\",\n    source: { type: \"file\", src: \"/fixtures/media/sample.mp4\" },\n  },\n  {\n    id: \"two\",\n    label: \"Descrita\",\n    source: { type: \"file\", src: \"/fixtures/media/described.mp4\" },\n  },\n];\nexport function Example() {\n  const [value, setValue] = useState(\"one\");\n  return (\n    <Playlist\n      items={sources.map((s) => ({\n        id: s.id,\n        title: s.label,\n        source: s.source,\n      }))}\n      activeId={value}\n      onSelect={setValue}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Transcript",
+    "name": "Transcript",
+    "group": "Alternativas",
+    "description": "Exiba uma transcrição com trechos navegáveis.",
+    "props": [
+      {
+        "name": "cues",
+        "type": "TranscriptCue[]"
+      },
+      {
+        "name": "follow?",
+        "type": "boolean"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.Transcript cues={cues}/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab chega aos trechos que permitem buscar; Enter ou Espaço navega até o tempo.",
+    "requirements": "Revise o texto e use intervalos finitos com end maior que start. Inclua sons necessários à compreensão.",
+    "tsx": "import { MediaRoot, MediaHost, Transcript } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nconst cues = [\n  { id: \"one\", start: 0, end: 5, text: \"Um tom acompanha o padrão de teste.\" },\n  { id: \"two\", start: 5, end: 12, text: \"O padrão continua até o final.\" },\n];\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <Transcript cues={cues} />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, Transcript } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nconst cues = [\n  { id: \"one\", start: 0, end: 5, text: \"Um tom acompanha o padrão de teste.\" },\n  { id: \"two\", start: 5, end: 12, text: \"O padrão continua até o final.\" },\n];\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <Transcript cues={cues} />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "TranscriptSearch",
+    "name": "TranscriptSearch",
+    "group": "Alternativas",
+    "description": "Encontre palavras na transcrição.",
+    "props": [
+      {
+        "name": "cues",
+        "type": "TranscriptCue[]"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.TranscriptSearch cues={cues}/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Digite no campo e use Tab para chegar aos resultados.",
+    "requirements": "Forneça cues válidos e uma transcrição completa. A busca não diferencia acentos ou letras maiúsculas.",
+    "tsx": "import {\n  MediaRoot,\n  MediaHost,\n  TranscriptSearch,\n} from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nconst cues = [\n  { id: \"one\", start: 0, end: 5, text: \"Um tom acompanha o padrão de teste.\" },\n  { id: \"two\", start: 5, end: 12, text: \"O padrão continua até o final.\" },\n];\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <TranscriptSearch cues={cues} />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import {\n  MediaRoot,\n  MediaHost,\n  TranscriptSearch,\n} from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nconst cues = [\n  { id: \"one\", start: 0, end: 5, text: \"Um tom acompanha o padrão de teste.\" },\n  { id: \"two\", start: 5, end: 12, text: \"O padrão continua até o final.\" },\n];\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <TranscriptSearch cues={cues} />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "ChapterList",
+    "name": "ChapterList",
+    "group": "Alternativas",
+    "description": "Navegue pelas seções de uma mídia.",
+    "props": [
+      {
+        "name": "chapters",
+        "type": "Chapter[]"
+      }
+    ],
+    "snippet": "<DS.MediaRoot kind=\"video\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} adapterFactory={autoAdapter}><DS.MediaHost /><DS.ChapterList chapters={chapters}/></DS.MediaRoot>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab percorre os capítulos disponíveis para navegação.",
+    "requirements": "Use títulos descritivos e tempos de início válidos. Sem busca disponível, os capítulos continuam como texto.",
+    "tsx": "import { MediaRoot, MediaHost, ChapterList } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nconst chapters = [\n  { id: \"one\", start: 0, title: \"Início\" },\n  { id: \"two\", start: 5, title: \"Segundo trecho\" },\n];\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <ChapterList chapters={chapters} />\n    </MediaRoot>\n  );\n}\n",
+    "jsx": "import { MediaRoot, MediaHost, ChapterList } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nimport { autoAdapter } from \"@cereja-project/ui-providers\";\nconst chapters = [\n  { id: \"one\", start: 0, title: \"Início\" },\n  { id: \"two\", start: 5, title: \"Segundo trecho\" },\n];\nexport function Example() {\n  return (\n    <MediaRoot\n      kind=\"video\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      adapterFactory={autoAdapter}\n    >\n      <MediaHost />\n      <ChapterList chapters={chapters} />\n    </MediaRoot>\n  );\n}\n"
+  },
+  {
+    "id": "ChapterMenu",
+    "name": "ChapterMenu",
+    "group": "Alternativas",
+    "description": "Escolha um capítulo em um menu.",
+    "props": [
+      {
+        "name": "chapters",
+        "type": "Chapter[]"
+      },
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"Capítulos\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} chapters={chapters}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço abre; setas percorrem; Escape fecha.",
+    "requirements": "Use capítulos com títulos claros e tempos de início dentro da mídia.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst chapters = [\n  { id: \"one\", start: 0, title: \"Início\" },\n  { id: \"two\", start: 5, title: \"Segundo trecho\" },\n];\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Capítulos\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      chapters={chapters}\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst chapters = [\n  { id: \"one\", start: 0, title: \"Início\" },\n  { id: \"two\", start: 5, title: \"Segundo trecho\" },\n];\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Capítulos\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      chapters={chapters}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "CaptionMenu",
+    "name": "CaptionMenu",
+    "group": "Alternativas",
+    "description": "Escolha a faixa de legendas.",
+    "props": [
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"Vídeo com legendas\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} tracks={tracks}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço abre; setas percorrem; Escape fecha.",
+    "requirements": "Forneça faixas revisadas com idioma e rótulo. Legendas automáticas precisam de revisão.",
+    "tsx": "import { TextTrackInput, VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst tracks: TextTrackInput[] = [\n  {\n    id: \"pt\",\n    src: \"/fixtures/tracks/sample.vtt\",\n    language: \"pt-BR\",\n    label: \"Português\",\n    kind: \"captions\",\n  },\n];\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Vídeo com legendas\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      tracks={tracks}\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst tracks = [\n  {\n    id: \"pt\",\n    src: \"/fixtures/tracks/sample.vtt\",\n    language: \"pt-BR\",\n    label: \"Português\",\n    kind: \"captions\",\n  },\n];\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Vídeo com legendas\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      tracks={tracks}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "TrackMenu",
+    "name": "TrackMenu",
+    "group": "Alternativas",
+    "description": "Escolha uma faixa de áudio ou qualidade.",
+    "props": [
+      {
+        "name": "kind",
+        "type": "captions/audio/quality"
+      },
+      {
+        "name": "contexto",
+        "type": "MediaRoot"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"Vídeo com legendas\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} tracks={tracks}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço abre; setas percorrem; Escape fecha.",
+    "requirements": "Nomeie as faixas para distinguir idioma, audiodescrição ou qualidade. As opções dependem do provedor.",
+    "tsx": "import { TextTrackInput, VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst tracks: TextTrackInput[] = [\n  {\n    id: \"pt\",\n    src: \"/fixtures/tracks/sample.vtt\",\n    language: \"pt-BR\",\n    label: \"Português\",\n    kind: \"captions\",\n  },\n];\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Vídeo com legendas\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      tracks={tracks}\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nconst tracks = [\n  {\n    id: \"pt\",\n    src: \"/fixtures/tracks/sample.vtt\",\n    language: \"pt-BR\",\n    label: \"Português\",\n    kind: \"captions\",\n  },\n];\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Vídeo com legendas\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      tracks={tracks}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "DescriptionToggle",
+    "name": "DescriptionToggle",
+    "group": "Alternativas",
+    "description": "Alterne entre vídeo original e audiodescrito.",
+    "props": [
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "onToggle",
+        "type": "()=>void"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"Versão descrita\" source={{type:\"file\",src:\"/fixtures/media/sample.mp4\"}} describedSource={{type:\"file\",src:\"/fixtures/media/described.mp4\"}}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço alterna a versão e mantém o foco no botão.",
+    "requirements": "Forneça uma versão descrita sincronizada com a original e as legendas correspondentes.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Versão descrita\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      describedSource={{ type: \"file\", src: \"/fixtures/media/described.mp4\" }}\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Versão descrita\"\n      source={{ type: \"file\", src: \"/fixtures/media/sample.mp4\" }}\n      describedSource={{ type: \"file\", src: \"/fixtures/media/described.mp4\" }}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "FilePicker",
+    "name": "FilePicker",
+    "group": "Arquivos",
+    "description": "Selecione arquivos do dispositivo.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "accept?",
+        "type": "string"
+      },
+      {
+        "name": "maxFiles?",
+        "type": "number"
+      },
+      {
+        "name": "maxSizeBytes?",
+        "type": "number"
+      },
+      {
+        "name": "files?",
+        "type": "File[]"
+      },
+      {
+        "name": "onFilesChange?",
+        "type": "(files:File[])=>void"
+      }
+    ],
+    "snippet": "<DS.FilePicker label=\"Selecionar imagens\" accept=\"image/*\" multiple maxFiles={3} />",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Enter ou Espaço abre o seletor nativo; Tab chega às ações de remoção.",
+    "requirements": "Informe tipos e limites. A seleção é local; qualquer envio deve ser implementado separadamente.",
+    "tsx": "import { FilePicker } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <FilePicker\n      label=\"Selecionar imagens\"\n      accept=\"image/*\"\n      multiple\n      maxFiles={3}\n    />\n  );\n}\n",
+    "jsx": "import { FilePicker } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <FilePicker\n      label=\"Selecionar imagens\"\n      accept=\"image/*\"\n      multiple\n      maxFiles={3}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "MediaPreview",
+    "name": "MediaPreview",
+    "group": "Arquivos",
+    "description": "Visualize um arquivo selecionado no dispositivo.",
+    "props": [
+      {
+        "name": "file",
+        "type": "File ou null"
+      },
+      {
+        "name": "alt?",
+        "type": "string"
+      },
+      {
+        "name": "label?",
+        "type": "string"
+      }
+    ],
+    "snippet": "<><DS.FilePicker label=\"Selecionar mídia\" files={files} onFilesChange={setFiles}/><DS.Field label=\"Texto alternativo\"><DS.Input value={text} onChange={e=>setText(e.target.value)}/></DS.Field><DS.MediaPreview file={files[0]??null} alt={text}/></>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Os controles de áudio e vídeo seguem o player.",
+    "requirements": "Forneça alt para imagens informativas e alternativas para áudio e vídeo. O componente libera a URL temporária ao trocar o arquivo.",
+    "tsx": "import { useState } from \"react\";\nimport {\n  FilePicker,\n  Field,\n  Input,\n  MediaPreview,\n} from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [text, setText] = useState(\"\");\n  const [files, setFiles] = useState<File[]>([]);\n  return (\n    <>\n      <FilePicker\n        label=\"Selecionar mídia\"\n        files={files}\n        onFilesChange={setFiles}\n      />\n      <Field label=\"Texto alternativo\">\n        <Input value={text} onChange={(e) => setText(e.target.value)} />\n      </Field>\n      <MediaPreview file={files[0] ?? null} alt={text} />\n    </>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport {\n  FilePicker,\n  Field,\n  Input,\n  MediaPreview,\n} from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [text, setText] = useState(\"\");\n  const [files, setFiles] = useState([]);\n  return (\n    <>\n      <FilePicker\n        label=\"Selecionar mídia\"\n        files={files}\n        onFilesChange={setFiles}\n      />\n      <Field label=\"Texto alternativo\">\n        <Input value={text} onChange={(e) => setText(e.target.value)} />\n      </Field>\n      <MediaPreview file={files[0] ?? null} alt={text} />\n    </>\n  );\n}\n"
+  },
+  {
+    "id": "MediaFileInfo",
+    "name": "MediaFileInfo",
+    "group": "Arquivos",
+    "description": "Mostre o nome, o tipo e o tamanho de um arquivo.",
+    "props": [
+      {
+        "name": "file",
+        "type": "File"
+      }
+    ],
+    "snippet": "<DS.MediaFileInfo file={new File([\"Amostra\"],\"amostra.txt\",{type:\"text/plain\"})}/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "As informações não recebem foco.",
+    "requirements": "Mantenha os metadados próximos do arquivo correspondente. O nome do arquivo não substitui alt ou transcrição.",
+    "tsx": "import { MediaFileInfo } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <MediaFileInfo\n      file={new File([\"Amostra\"], \"amostra.txt\", { type: \"text/plain\" })}\n    />\n  );\n}\n",
+    "jsx": "import { MediaFileInfo } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <MediaFileInfo\n      file={new File([\"Amostra\"], \"amostra.txt\", { type: \"text/plain\" })}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Button",
+    "name": "Button",
+    "group": "Controles",
+    "description": "Execute uma ação.",
+    "props": [
+      {
+        "name": "...props",
+        "type": "ButtonHTMLAttributes"
+      }
+    ],
+    "snippet": "<><DS.Button onClick={()=>setAction(\"Alterações salvas.\")}>Salvar alterações</DS.Button><DS.Status>{action}</DS.Status></>",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Enter ou Espaço aciona o botão.",
+    "requirements": "Use um verbo que descreva o resultado. Para navegar a outro endereço, use um link.",
+    "tsx": "import { useState } from \"react\";\nimport { Button, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <Button onClick={() => setAction(\"Alterações salvas.\")}>\n        Salvar alterações\n      </Button>\n      <Status>{action}</Status>\n    </>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Button, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <Button onClick={() => setAction(\"Alterações salvas.\")}>\n        Salvar alterações\n      </Button>\n      <Status>{action}</Status>\n    </>\n  );\n}\n"
+  },
+  {
+    "id": "IconButton",
+    "name": "IconButton",
+    "group": "Controles",
+    "description": "Execute uma ação representada por um ícone.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "type": "ReactNode"
+      },
+      {
+        "name": "...props",
+        "type": "ButtonHTMLAttributes"
+      }
+    ],
+    "snippet": "<DS.IconButton label=\"Favoritar mídia\" aria-pressed={checked} onClick={()=>setChecked(!checked)}>☆</DS.IconButton>",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Enter ou Espaço aciona o botão.",
+    "requirements": "Forneça label para nomear a ação. Use aria-pressed para uma opção que alterna entre dois estados.",
+    "tsx": "import { useState } from \"react\";\nimport { IconButton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return (\n    <IconButton\n      label=\"Favoritar mídia\"\n      aria-pressed={checked}\n      onClick={() => setChecked(!checked)}\n    >\n      ☆\n    </IconButton>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { IconButton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return (\n    <IconButton\n      label=\"Favoritar mídia\"\n      aria-pressed={checked}\n      onClick={() => setChecked(!checked)}\n    >\n      ☆\n    </IconButton>\n  );\n}\n"
+  },
+  {
+    "id": "Slider",
+    "name": "Slider",
+    "group": "Controles",
+    "description": "Escolha um valor em um intervalo.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "min",
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "type": "number"
+      },
+      {
+        "name": "step",
+        "type": "number"
+      },
+      {
+        "name": "value",
+        "type": "number"
+      },
+      {
+        "name": "valueText",
+        "type": "string"
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value:number)=>void"
+      }
+    ],
+    "snippet": "<DS.Slider label=\"Volume\" min={0} max={100} step={5} value={number} valueText={`${number}%`} onValueChange={setNumber}/>",
+    "variants": [
+      "default",
+      "disabled"
+    ],
+    "keyboard": "Use as setas para ajustar o valor.",
+    "requirements": "Forneça label e valueText com a unidade. Não use apenas a posição ou a cor para informar o valor.",
+    "tsx": "import { useState } from \"react\";\nimport { Slider } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [number, setNumber] = useState(40);\n  return (\n    <Slider\n      label=\"Volume\"\n      min={0}\n      max={100}\n      step={5}\n      value={number}\n      valueText={`${number}%`}\n      onValueChange={setNumber}\n    />\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Slider } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [number, setNumber] = useState(40);\n  return (\n    <Slider\n      label=\"Volume\"\n      min={0}\n      max={100}\n      step={5}\n      value={number}\n      valueText={`${number}%`}\n      onValueChange={setNumber}\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Menu",
+    "name": "Menu",
+    "group": "Controles",
+    "description": "Reúna ações relacionadas.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "items",
+        "type": "MenuItem[]"
+      },
+      {
+        "name": "portalContainer?",
+        "type": "HTMLElement"
+      }
+    ],
+    "snippet": "<><DS.Menu label=\"Ações\" items={[{id:\"favorite\",label:\"Favoritar\",onSelect:()=>setAction(\"Favorito marcado.\")}]} /><DS.Status>{action}</DS.Status></>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Enter ou Espaço abre; setas percorrem; Escape fecha.",
+    "requirements": "Use nomes de ações claros. Para navegação comum entre páginas, prefira links em uma região nav.",
+    "tsx": "import { useState } from \"react\";\nimport { Menu, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <Menu\n        label=\"Ações\"\n        items={[\n          {\n            id: \"favorite\",\n            label: \"Favoritar\",\n            onSelect: () => setAction(\"Favorito marcado.\"),\n          },\n        ]}\n      />\n      <Status>{action}</Status>\n    </>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Menu, Status } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [action, setAction] = useState(\"\");\n  return (\n    <>\n      <Menu\n        label=\"Ações\"\n        items={[\n          {\n            id: \"favorite\",\n            label: \"Favoritar\",\n            onSelect: () => setAction(\"Favorito marcado.\"),\n          },\n        ]}\n      />\n      <Status>{action}</Status>\n    </>\n  );\n}\n"
+  },
+  {
+    "id": "Tooltip",
+    "name": "Tooltip",
+    "group": "Controles",
+    "description": "Acrescente uma dica a um controle.",
+    "props": [
+      {
+        "name": "content",
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "type": "ReactElement"
+      }
+    ],
+    "snippet": "<DS.Tooltip content=\"Adicionar aos favoritos\"><DS.IconButton label=\"Adicionar aos favoritos\" aria-pressed={checked} onClick={()=>setChecked(!checked)}>☆</DS.IconButton></DS.Tooltip>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "A dica aparece ao focar o controle e pode ser dispensada com Escape.",
+    "requirements": "O controle deve ter seu próprio nome acessível. Não coloque instruções essenciais apenas na dica.",
+    "tsx": "import { useState } from \"react\";\nimport { Tooltip, IconButton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return (\n    <Tooltip content=\"Adicionar aos favoritos\">\n      <IconButton\n        label=\"Adicionar aos favoritos\"\n        aria-pressed={checked}\n        onClick={() => setChecked(!checked)}\n      >\n        ☆\n      </IconButton>\n    </Tooltip>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Tooltip, IconButton } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [checked, setChecked] = useState(false);\n  return (\n    <Tooltip content=\"Adicionar aos favoritos\">\n      <IconButton\n        label=\"Adicionar aos favoritos\"\n        aria-pressed={checked}\n        onClick={() => setChecked(!checked)}\n      >\n        ☆\n      </IconButton>\n    </Tooltip>\n  );\n}\n"
+  },
+  {
+    "id": "Dialog",
+    "name": "Dialog",
+    "group": "Controles",
+    "description": "Abra uma tarefa ou informação em um diálogo modal.",
+    "props": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "description?",
+        "type": "string"
+      },
+      {
+        "name": "open",
+        "type": "boolean"
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open:boolean)=>void"
+      },
+      {
+        "name": "trigger?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.Dialog title=\"Detalhes\" description=\"Informações da mídia\" open={open} onOpenChange={setOpen} trigger={<DS.Button>Abrir diálogo</DS.Button>}><p>Conteúdo complementar.</p></DS.Dialog>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Tab permanece no diálogo; Escape fecha e devolve o foco ao acionador.",
+    "requirements": "Forneça título e uma ação de fechamento clara. Use descrição apenas quando ela ajudar a entender o conteúdo.",
+    "tsx": "import { useState } from \"react\";\nimport { Dialog, Button } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [open, setOpen] = useState(false);\n  return (\n    <Dialog\n      title=\"Detalhes\"\n      description=\"Informações da mídia\"\n      open={open}\n      onOpenChange={setOpen}\n      trigger={<Button>Abrir diálogo</Button>}\n    >\n      <p>Conteúdo complementar.</p>\n    </Dialog>\n  );\n}\n",
+    "jsx": "import { useState } from \"react\";\nimport { Dialog, Button } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  const [open, setOpen] = useState(false);\n  return (\n    <Dialog\n      title=\"Detalhes\"\n      description=\"Informações da mídia\"\n      open={open}\n      onOpenChange={setOpen}\n      trigger={<Button>Abrir diálogo</Button>}\n    >\n      <p>Conteúdo complementar.</p>\n    </Dialog>\n  );\n}\n"
+  },
+  {
+    "id": "HLS",
+    "name": "HLS",
+    "group": "Integrações",
+    "description": "Reproduza uma transmissão ou um vídeo HLS.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "tracks?",
+        "type": "TextTrackInput[]"
+      },
+      {
+        "name": "children?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"HLS\" source={{type:\"hls\",src:\"/fixtures/streams/hls/stream.m3u8\"}} loadStrategy=\"on-interaction\"/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Os controles seguem as capacidades da fonte.",
+    "requirements": "Forneça legendas e alternativas. O suporte nativo e o adaptador podem expor capacidades diferentes.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"HLS\"\n      source={{ type: \"hls\", src: \"/fixtures/streams/hls/stream.m3u8\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"HLS\"\n      source={{ type: \"hls\", src: \"/fixtures/streams/hls/stream.m3u8\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n"
+  },
+  {
+    "id": "DASH",
+    "name": "DASH",
+    "group": "Integrações",
+    "description": "Reproduza uma transmissão ou um vídeo MPEG-DASH.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "tracks?",
+        "type": "TextTrackInput[]"
+      },
+      {
+        "name": "children?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"DASH\" source={{type:\"dash\",src:\"/fixtures/streams/dash/stream.mpd\"}} loadStrategy=\"on-interaction\"/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Os controles seguem as capacidades da fonte.",
+    "requirements": "Forneça legendas e alternativas. A URL do manifesto e seus segmentos precisam permitir o acesso do navegador.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"DASH\"\n      source={{ type: \"dash\", src: \"/fixtures/streams/dash/stream.mpd\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"DASH\"\n      source={{ type: \"dash\", src: \"/fixtures/streams/dash/stream.mpd\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n"
+  },
+  {
+    "id": "YouTube",
+    "name": "YouTube",
+    "group": "Integrações",
+    "description": "Incorpore um vídeo do YouTube.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "tracks?",
+        "type": "TextTrackInput[]"
+      },
+      {
+        "name": "children?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"YouTube\" source={{type:\"youtube\",id:\"M7lc1UVf-VE\"}} loadStrategy=\"on-interaction\"/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O carregamento começa no botão; o iframe mantém os controles do YouTube.",
+    "requirements": "Escolha vídeos com legendas revisadas e ofereça transcrição. O provedor controla parte da experiência de teclado.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"YouTube\"\n      source={{ type: \"youtube\", id: \"M7lc1UVf-VE\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"YouTube\"\n      source={{ type: \"youtube\", id: \"M7lc1UVf-VE\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n"
+  },
+  {
+    "id": "Vimeo",
+    "name": "Vimeo",
+    "group": "Integrações",
+    "description": "Incorpore um vídeo do Vimeo.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "MediaSource"
+      },
+      {
+        "name": "tracks?",
+        "type": "TextTrackInput[]"
+      },
+      {
+        "name": "children?",
+        "type": "ReactNode"
+      }
+    ],
+    "snippet": "<DS.VideoPlayer label=\"Vimeo\" source={{type:\"vimeo\",id:\"76979871\"}} loadStrategy=\"on-interaction\"/>",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "O carregamento começa no botão; o iframe mantém os controles do Vimeo.",
+    "requirements": "Escolha vídeos com alternativas acessíveis. As configurações do vídeo podem limitar os controles externos.",
+    "tsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Vimeo\"\n      source={{ type: \"vimeo\", id: \"76979871\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n",
+    "jsx": "import { VideoPlayer } from \"@cereja-project/ui-react\";\nimport \"@cereja-project/ui-react/styles.css\";\nexport function Example() {\n  return (\n    <VideoPlayer\n      label=\"Vimeo\"\n      source={{ type: \"vimeo\", id: \"76979871\" }}\n      loadStrategy=\"on-interaction\"\n    />\n  );\n}\n"
+  }
+]

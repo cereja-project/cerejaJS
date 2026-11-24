@@ -1,0 +1,22 @@
+{
+  "e2e": {
+    "exitCode": 1,
+    "details": [
+      "Error: browserType.launch: Target page, context or browser has been closed",
+      "[pid=114][err] [114:114:1107/120411.663363:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)",
+      "- [pid=114][err] [114:114:1107/120411.663363:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)",
+      "1 failed",
+      "5 did not run"
+    ]
+  },
+  "providers": {
+    "exitCode": 1,
+    "details": [
+      "Error: browserType.launch: Target page, context or browser has been closed",
+      "[pid=272][err] [272:272:1107/120413.698047:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)",
+      "- [pid=272][err] [272:272:1107/120413.698047:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)",
+      "1 failed",
+      "3 did not run"
+    ]
+  }
+}
