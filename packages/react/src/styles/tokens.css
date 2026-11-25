@@ -1,0 +1,16 @@
+:root {
+  --md-bg: #fff;
+  --md-surface: #f3f3f1;
+  --md-fg: #202020;
+  --md-muted: #535353;
+  --md-border: #737373;
+  --md-accent: #262626;
+  --md-on-accent: #fff;
+  --md-focus: #005fcc;
+  --md-radius: 0.625rem;
+  --md-space: 0.75rem;
+  --md-font: ui-sans-serif, system-ui, sans-serif;
+  --md-control-size: 2.75rem;
+  --md-line-height: 1.5;
+  --md-overlay: rgb(0 0 0 / 0.65);
+}

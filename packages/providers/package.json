@@ -1,0 +1,57 @@
+{
+  "name": "@cereja-project/ui-providers",
+  "version": "0.2.0",
+  "type": "module",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./native": {
+      "types": "./dist/native.d.ts",
+      "import": "./dist/native.js"
+    },
+    "./hls": {
+      "types": "./dist/hls.d.ts",
+      "import": "./dist/hls.js"
+    },
+    "./dash": {
+      "types": "./dist/dash.d.ts",
+      "import": "./dist/dash.js"
+    },
+    "./youtube": {
+      "types": "./dist/youtube.d.ts",
+      "import": "./dist/youtube.js"
+    },
+    "./vimeo": {
+      "types": "./dist/vimeo.d.ts",
+      "import": "./dist/vimeo.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@cereja-project/ui-core": "0.2.0",
+    "hls.js": "^1.7.4",
+    "dashjs": "^5.3.0",
+    "@vimeo/player": "^2.30.4"
+  }
+}

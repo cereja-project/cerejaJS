@@ -1,0 +1,40 @@
+{
+  "scope": "Numeric token pairs only; not rendered browser contrast validation",
+  "results": [
+    {
+      "pair": "Texto principal",
+      "foreground": "#202020",
+      "background": "#ffffff",
+      "ratio": 16.29,
+      "minimum": 4.5
+    },
+    {
+      "pair": "Texto secund\u00e1rio",
+      "foreground": "#535353",
+      "background": "#ffffff",
+      "ratio": 7.69,
+      "minimum": 4.5
+    },
+    {
+      "pair": "Borda de controle",
+      "foreground": "#737373",
+      "background": "#ffffff",
+      "ratio": 4.74,
+      "minimum": 3
+    },
+    {
+      "pair": "Foco sobre fundo padr\u00e3o",
+      "foreground": "#005fcc",
+      "background": "#ffffff",
+      "ratio": 5.98,
+      "minimum": 3
+    },
+    {
+      "pair": "Texto de controle selecionado",
+      "foreground": "#ffffff",
+      "background": "#262626",
+      "ratio": 15.13,
+      "minimum": 4.5
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "types": ["vitest/globals", "node", "vite/client", "youtube"],
+    "paths": {
+      "@cereja-project/ui-core": ["./packages/core/src/index.ts"],
+      "@cereja-project/ui-react": ["./packages/react/src/index.ts"],
+      "@cereja-project/ui-providers/*": ["./packages/providers/src/*"],
+      "@cereja-project/ui-providers": ["./packages/providers/src/index.ts"]
+    }
+  },
+  "include": ["packages", "tests", "apps"]
+}

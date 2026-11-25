@@ -1,0 +1,17 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:2
+#EXT-X-MEDIA-SEQUENCE:0
+#EXTINF:2.000000,
+segment00.mpegts
+#EXTINF:2.000000,
+segment01.mpegts
+#EXTINF:2.000000,
+segment02.mpegts
+#EXTINF:2.000000,
+segment03.mpegts
+#EXTINF:2.000000,
+segment04.mpegts
+#EXTINF:2.000000,
+segment05.mpegts
+#EXT-X-ENDLIST
